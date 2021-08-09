@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {%  if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'user-created' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+            {% elif cat == 'auth-success' %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ msg }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
+        {% endfor %} 
+    {% endif %}
+{% endwith %}
+
+
+<div class="container">
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Welcome to the Marvel Universe! </h2>
+            <h4>We store the greatest characters that Stan Lee ever created!</h4>
+            <div><button class="btn btn-primary">Rate your Marvel Movies here!</button>
+                
+                <button class="btn btn-primary">Vote for your Favorite Character here!</button>
+                 
+            </div>
+        </div>
+        <!-- Header -->
+        <section class="row" id="second">
+            <div class="col-12-col-md-6" id='2nd-text'>
+                <h5>We are the original fans! Our mission is to detail <br>
+                    every character in the Marvel Universe! 
+                </h5>
+                <h4>We have the largest database of Marvel characters in the world!
+                </h4>
+            </div>
+                <img src="../../static/CSS/images/The_Marvel_Universe.png" alt="all the characters" id="hv-image">
+        </section>
+    </header>
+    <!-- Start of Middle section -->
+    <section class="row">
+        <div class="col-12" id="middle-text">
+            <h2>View Our Collection!</h2>
+            <p>From Spiderman to Dr Doom, check out our fantastic collection!
+            </p>
+        </div>
+    </section>
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/CSS/images/Thanos.jpg" alt="Thanos" id='mid-image'>
+            <h3>Villains!</h3>
+            <p>From Thanos to Galactus, check out our list of the best of the bad guys!</p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/CSS/images/Silver Surfer.jpg" alt="Silver Surfer" id='mid-image'>
+            <h3>Heroes!</h3>
+            <p>Check out the power specs on your favorite characters!
+            </p>
+
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/CSS/images/Wolverine.jpg" alt="Sleek Roadster" id='mid-image'>
+            <h3>The Fallen</h3>
+            <p>Check out our list of Fallen Characters!</p>
+
+        </div>
+    </section>
+</div>
+
+
+{% endblock content %}

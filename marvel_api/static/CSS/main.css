@@ -1,0 +1,56 @@
+
+body{
+    background-color: aquamarine;
+}
+
+ul#horizontal-list{
+    min-width: 55vw;
+    list-style: none;
+    padding-top: 2.4vw;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: black;
+}
+
+#horizontal-list a:nth-child(1){
+    border: 2px solid green;
+    border-radius: 11px;
+    margin-right: .2vw;
+}
+
+/* Header */
+
+#header-text{
+    padding: 2vw;
+}
+
+#hv-image{
+    
+    width: 75%;
+    max-width: 100%;
+}
+
+/* Middle */
+
+#middle-text{
+    text-align: center;
+    padding: 2vh;
+}
+
+#middle-text h3{
+    padding: 2vw;
+
+}
+
+#mid-image{
+    width: 95%;
+    max-width: 100%;
+    margin:auto;
+    margin-bottom: auto;
+    margin-bottom: 2vw;
+
+}
